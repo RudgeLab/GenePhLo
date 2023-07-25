@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 with open('README.md', 'r') as ld:
     long_description = ld.read()
 
-setup(name='loica',
+setup(name='genephlo',
     version='0.0.0',
     author='Tim Rudge',
     author_email='timrudge@gmail.com',
@@ -18,15 +18,18 @@ setup(name='loica',
         'Operating System :: OS Independent',
         ],
     install_requires=[        
-	'loica'
+	'loica',
         'numpy', 
 	'scipy',
     	'pandas',
+        'matplotlib'
         ],
     setup_requires=[
-        'numpy',
+        'loica',
+	'numpy',
 	    'scipy',
 	    'pandas',
+            'matplotlib'
         ],
     packages=find_packages(),
     python_requires='>=3'
